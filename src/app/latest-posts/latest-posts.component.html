@@ -1,0 +1,16 @@
+<header>
+    <h3 class="h6">Latest Posts</h3>
+</header>
+<div class="blog-posts" *ngFor="let blogPost of blogPosts">
+    <a  [routerLink]="['/post', blogPost._id]">
+        <div class="item d-flex align-items-center">
+            <div class="image"><img [src]="blogPost.featuredImage" alt="..." class="img-fluid"></div>
+            <div class="title"><strong>{{blogPost.title}}</strong>
+                <div class="d-flex align-items-center">
+                    <div class="views"><i class="icon-eye"></i> {{blogPost.views}}</div>
+                    <div class="comments"><i class="icon-comment"></i>{{blogPost.comments.length}}</div>
+                </div>
+            </div>
+        </div>
+    </a>
+  </div>

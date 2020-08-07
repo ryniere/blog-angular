@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+      <!-- Latest Posts -->
+      <main class="posts-listing col-lg-8"> 
+        <div class="container">
+          <div class="row" *ngFor="let blogPost of blogPosts">
+            <!-- post -->
+            <app-post-card class="post col-xl-6" [blogPost]= "blogPost" ></app-post-card>
+
+          </div>
+            <div class="w-100"><app-paging-component [page]="page" (newPage)="changePage($event)"></app-paging-component></div>
+        </div>
+      </main>
+      <aside class="col-lg-4">
+        <!-- Widget [Search Bar Widget]-->
+        <div class="widget search">
+          <header>
+            <h3 class="h6">Search the blog</h3>
+          </header>
+          <form action="#" class="search-form">
+            <div class="form-group">
+              <input type="search" placeholder="What are you looking for?">
+              <button type="submit" class="submit"><i class="icon-search"></i></button>
+            </div>
+          </form>
+        </div>
+        <!-- Widget [Latest Posts Widget] -->
+        <div class="widget latest-posts">
+          <app-latest-posts ></app-latest-posts>
+        </div>
+        <!-- Widget [Categories Widget]-->
+        <div class="widget categories">
+          <app-categories></app-categories>
+        </div>
+        <!-- Widget [Tags Cloud Widget]-->
+        <div class="widget tags">       
+          <app-tags ></app-tags>
+        </div>
+      </aside>
+    </div>
+  </div>
+  

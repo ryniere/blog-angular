@@ -1,0 +1,38 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th [colspan]="headerSpan">table header</th>
+        </tr>
+    </thead>
+
+</table>
+
+
+Can't bind to 'colspan' since it isn't a known property of 'th'
+<table class="table">
+    <thead>
+        <tr>
+            <th colspan="headerSpan">table header</th>
+        </tr>
+    </thead>
+
+</table>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th >Animal Name</th>
+            <th >Animal Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let animal of animals">
+            <td>{{animal.name}}</td>
+            <td>{{animal.age}}</td>
+        </tr>
+    </tbody>
+
+</table>
+
