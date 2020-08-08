@@ -38,4 +38,10 @@ export class EditPostComponentComponent implements OnInit {
 
   }
 
+  onDelete(): void {
+
+    this.service.deletePostById(this.blogPost._id).toPromise().then( () => this.router.navigate(['/admin']));
+
+  }
+
 }
