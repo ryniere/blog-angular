@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { BlogPost } from '../BlogPost';
 import { PostService } from '../post-service';
 
@@ -12,7 +12,7 @@ export class PostsTableComponentComponent implements OnInit {
 
   blogPosts : Array<BlogPost>;
 
-  constructor(private service: PostService, private router: Router, private activatedRoute: ActivatedRoute) { }
+  constructor(private service: PostService, private router: Router) { }
 
   ngOnInit(): void {
 

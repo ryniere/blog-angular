@@ -42,7 +42,7 @@ export class PostService {
     }
 
     updatePostById(id: string, data: BlogPost): Observable<any> {
-
+        console.log(`${id} : ${data.title}`);
         return this.http.put<any>(`${apiUrl}/posts/${id}`, data);
     }
 

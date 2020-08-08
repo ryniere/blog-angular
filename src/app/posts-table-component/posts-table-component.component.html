@@ -12,7 +12,7 @@
                     </tr>
                 </thead>
                 <tbody *ngFor="let blogPost of blogPosts">
-                    <tr>
+                    <tr [routerLink]="['/admin', blogPost._id]">
                         <td>{{blogPost.title}}</td>
                         <td>{{blogPost.postDate | date:'mediumDate'}}</td>
                         <td>{{blogPost.category}}</td>
