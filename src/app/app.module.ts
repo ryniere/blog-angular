@@ -20,6 +20,7 @@ import { PagingComponentComponent } from './paging-component/paging-component.co
 import { FooterPostsComponentComponent } from './footer-posts-component/footer-posts-component.component';
 import { PostsTableComponentComponent } from './posts-table-component/posts-table-component.component';
 import { EditPostComponentComponent } from './edit-post-component/edit-post-component.component';
+import { NewPostComponentComponent } from './new-post-component/new-post-component.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { EditPostComponentComponent } from './edit-post-component/edit-post-comp
     PagingComponentComponent,
     FooterPostsComponentComponent,
     PostsTableComponentComponent,
-    EditPostComponentComponent
+    EditPostComponentComponent,
+    NewPostComponentComponent
   ],
   imports: [
     BrowserModule,
