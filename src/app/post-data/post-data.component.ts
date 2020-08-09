@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogPost } from '../BlogPost';
+import { Comment } from '../Comment';
 import { PostService } from '../post-service';
 import {ActivatedRoute} from '@angular/router';
 
@@ -12,6 +13,8 @@ export class PostDataComponent implements OnInit {
 
   blogPost : BlogPost;
   querySub:any;
+  commentName: string;
+  commentText: string;
 
   constructor(private service: PostService, private route:ActivatedRoute) { }
 
@@ -26,6 +29,24 @@ export class PostDataComponent implements OnInit {
 
   ngOnDestroy(): void {
     if(this.querySub) this.querySub.unsubscribe();
+  }
+
+  onSubmitComment(): void {
+
+    let comment = new Comment();
+    comment.author =  this.commentName;
+    comment.comment =  this.commentText;
+    comment.date =  new Date().toLocaleDateString();
+
+    console.log(comment.comment);
+
+    this.blogPost.comments.push(comment);
+
+    this.service.updatePostById(this.blogPost._id, this.blogPost).toPromise().then( () => {
+      this.commentName = '';
+      this.commentText = '';
+    });
+
   }
 
 }
