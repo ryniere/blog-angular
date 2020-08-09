@@ -16,12 +16,16 @@ export class NewPostComponentComponent implements OnInit {
   constructor(private service: PostService, private router: Router) { }
 
   ngOnInit(): void {
-    console.log('RYniere NewPostComponentComponent')
+    this.blogPost = new BlogPost();
   }
 
   onSubmit(): void {
 
     this.blogPost.tags = this.tags.split(",").map(tag => tag.trim());
+    this.blogPost.isPrivate = false;
+    this.blogPost.postDate =  new Date().toLocaleDateString();
+    this.blogPost.postedBy =  "WEB422 Student";
+    this.blogPost.views = 0;
 
     this.service.newPost(this.blogPost).toPromise().then( () => this.router.navigate(['/admin']));
 
