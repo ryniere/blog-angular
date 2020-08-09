@@ -6,6 +6,8 @@
 *
 * Name: Ryniere dos Santos Silva Student ID: 138888185 Date: 08/9/2020
 *
+* Online Link: https://ryniere-blog-angular.netlify.app/
+*
 ********************************************************************************/
 
 import { Component } from '@angular/core';
