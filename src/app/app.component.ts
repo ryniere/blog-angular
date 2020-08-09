@@ -1,10 +1,10 @@
 /*********************************************************************************
-* WEB422 – Assignment 05
+* WEB422 – Assignment 06
 * I declare that this assignment is my own work in accordance with Seneca Academic Policy. No part of this
 * assignment has been copied manually or electronically from any other source (including web sites) or
 * distributed to other students.
 *
-* Name: Ryniere dos Santos Silva Student ID: 138888185 Date: 07/29/2020
+* Name: Ryniere dos Santos Silva Student ID: 138888185 Date: 08/9/2020
 *
 ********************************************************************************/
 
